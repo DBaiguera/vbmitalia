@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <script>if(window.top===window.self&&location.hostname.indexOf('21abb')!==-1){location.replace('https://vbmitalia.com'+location.pathname);}</script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobili su Misura - V.B.M.</title>
+    <meta name="description" content="Arredi artigianali su misura. Design contemporaneo e tradizione italiana.">
+    <link rel="preload" href="fonts/cormorant-600-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/montserrat-500-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/gallery.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="images/logo-vbm.png" alt="V.B.M." class="logo-img" width="178" height="130">
+                    </a>
+                </div>
+
+                <div class="nav-menu" id="navMenu">
+                    <a href="index.html" class="nav-link" data-it="Home" data-en="Home">Home</a>
+                    <a href="marmi.html" class="nav-link" data-it="Marmi" data-en="Marble">Marmi</a>
+                    <a href="mobili.html" class="nav-link active" data-it="Mobili" data-en="Furniture">Mobili</a>
+                    <a href="chi-siamo.html" class="nav-link" data-it="Chi Siamo" data-en="About Us">Chi Siamo</a>
+                    <a href="contatti.html" class="nav-link" data-it="Contatti" data-en="Contact">Contatti</a>
+                </div>
+
+                <div class="nav-right">
+                    <div class="language-switcher">
+                        <button class="lang-btn active" data-lang="it">IT</button>
+                        <span class="separator">|</span>
+                        <button class="lang-btn" data-lang="en">EN</button>
+                    </div>
+                    <button class="mobile-toggle" id="mobileToggle">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header" style="background-image: url('images/mobili-header.jpg')">
+        <div class="page-header-overlay"></div>
+        <div class="container">
+            <h1 class="page-title" data-it="Mobili su Misura" data-en="Custom Furniture">Mobili su Misura</h1>
+            <p class="page-subtitle" data-it="Quando l'artigianato diventa arte" data-en="When craftsmanship becomes art">
+                Quando l'artigianato diventa arte
+            </p>
+        </div>
+    </section>
+
+    <!-- Intro Section -->
+    <section class="intro-section">
+        <div class="container">
+            <div class="intro-content">
+                <h2 data-it="Arredi artigianali che raccontano storie" data-en="Artisan furnishings that tell stories">
+                    Arredi artigianali che raccontano storie
+                </h2>
+                <p data-it="Ogni mobile che realizziamo nasce da un dialogo con il cliente, dalla comprensione delle sue esigenze e dal desiderio di creare qualcosa di unico. Unendo tecniche tradizionali e design contemporaneo, diamo vita ad arredi che durano nel tempo e diventano parte della storia di chi li possiede." data-en="Every piece we create begins with a dialogue with the client, understanding their needs and the desire to create something unique. Combining traditional techniques and contemporary design, we create furnishings that last over time.">
+                    Ogni mobile che realizziamo nasce da un dialogo con il cliente, dalla comprensione delle sue esigenze e dal desiderio di creare qualcosa di unico. Unendo tecniche tradizionali e design contemporaneo, diamo vita ad arredi che durano nel tempo e diventano parte della storia di chi li possiede.
+                </p>
+                <p data-it="Legni pregiati, finiture curate nei minimi dettagli, meccanismi di qualità superiore: ogni componente viene selezionato con cura per garantire la massima qualità e durevolezza." data-en="Premium woods, finishes with attention to the smallest details, superior quality mechanisms: every component is carefully selected to ensure maximum quality and durability.">
+                    Legni pregiati, finiture curate nei minimi dettagli, meccanismi di qualità superiore: ogni componente viene selezionato con cura per garantire la massima qualità e durevolezza.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery-section">
+        <div class="container">
+            <h2 class="section-title" data-it="Le Nostre Creazioni" data-en="Our Creations">Le Nostre Creazioni</h2>
+            <p class="section-subtitle" data-it="Ogni pezzo è un capolavoro di artigianato italiano" data-en="Every piece is a masterpiece of Italian craftsmanship">
+                Ogni pezzo è un capolavoro di artigianato italiano
+            </p>
+            <div class="gallery-grid" id="mobili-gallery">
+                <!-- Furniture images will be loaded dynamically -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Services/Categories Section -->
+    <section class="categories-section">
+        <div class="container">
+            <h2 class="section-title" data-it="Cosa Realizziamo" data-en="What We Create">Cosa Realizziamo</h2>
+
+            <div class="categories-grid">
+                <div class="category-card">
+                    <div class="category-icon">🛋️</div>
+                    <h3 data-it="Living & Soggiorni" data-en="Living Rooms">Living & Soggiorni</h3>
+                    <ul>
+                        <li data-it="Librerie su misura" data-en="Custom bookcases">Librerie su misura</li>
+                        <li data-it="Pareti attrezzate" data-en="Equipped walls">Pareti attrezzate</li>
+                        <li data-it="Tavoli da pranzo" data-en="Dining tables">Tavoli da pranzo</li>
+                        <li data-it="Consolle e credenze" data-en="Consoles and sideboards">Consolle e credenze</li>
+                        <li data-it="Mobile TV personalizzati" data-en="Custom TV units">Mobile TV personalizzati</li>
+                    </ul>
+                </div>
+
+                <div class="category-card">
+                    <div class="category-icon">🛏️</div>
+                    <h3 data-it="Camere da Letto" data-en="Bedrooms">Camere da Letto</h3>
+                    <ul>
+                        <li data-it="Armadi su misura" data-en="Custom wardrobes">Armadi su misura</li>
+                        <li data-it="Cabine armadio" data-en="Walk-in closets">Cabine armadio</li>
+                        <li data-it="Letti imbottiti" data-en="Upholstered beds">Letti imbottiti</li>
+                        <li data-it="Comodini e comò" data-en="Nightstands and dressers">Comodini e comò</li>
+                        <li data-it="Boiserie" data-en="Boiserie">Boiserie</li>
+                    </ul>
+                </div>
+
+                <div class="category-card">
+                    <div class="category-icon">🍳</div>
+                    <h3 data-it="Cucine" data-en="Kitchens">Cucine</h3>
+                    <ul>
+                        <li data-it="Cucine su misura" data-en="Custom kitchens">Cucine su misura</li>
+                        <li data-it="Isole cucina" data-en="Kitchen islands">Isole cucina</li>
+                        <li data-it="Dispense personalizzate" data-en="Custom pantries">Dispense personalizzate</li>
+                        <li data-it="Tavoli e sedie" data-en="Tables and chairs">Tavoli e sedie</li>
+                        <li data-it="Boiserie cucina" data-en="Kitchen paneling">Boiserie cucina</li>
+                    </ul>
+                </div>
+
+                <div class="category-card">
+                    <div class="category-icon">💼</div>
+                    <h3 data-it="Uffici & Studio" data-en="Offices & Studies">Uffici & Studio</h3>
+                    <ul>
+                        <li data-it="Scrivanie su misura" data-en="Custom desks">Scrivanie su misura</li>
+                        <li data-it="Librerie per ufficio" data-en="Office bookcases">Librerie per ufficio</li>
+                        <li data-it="Tavoli riunione" data-en="Meeting tables">Tavoli riunione</li>
+                        <li data-it="Contenitori e archivi" data-en="Storage and archives">Contenitori e archivi</li>
+                        <li data-it="Reception personalizzate" data-en="Custom receptions">Reception personalizzate</li>
+                    </ul>
+                </div>
+
+                <div class="category-card">
+                    <div class="category-icon">🚪</div>
+                    <h3 data-it="Porte & Boiserie" data-en="Doors & Paneling">Porte & Boiserie</h3>
+                    <ul>
+                        <li data-it="Porte interne su misura" data-en="Custom interior doors">Porte interne su misura</li>
+                        <li data-it="Porte scorrevoli" data-en="Sliding doors">Porte scorrevoli</li>
+                        <li data-it="Boiserie decorative" data-en="Decorative paneling">Boiserie decorative</li>
+                        <li data-it="Rivestimenti pareti" data-en="Wall coverings">Rivestimenti pareti</li>
+                        <li data-it="Controsoffitti" data-en="False ceilings">Controsoffitti</li>
+                    </ul>
+                </div>
+
+                <div class="category-card">
+                    <div class="category-icon">✨</div>
+                    <h3 data-it="Complementi" data-en="Accessories">Complementi</h3>
+                    <ul>
+                        <li data-it="Specchiere" data-en="Mirrors">Specchiere</li>
+                        <li data-it="Cornici su misura" data-en="Custom frames">Cornici su misura</li>
+                        <li data-it="Appendiabiti design" data-en="Designer coat racks">Appendiabiti design</li>
+                        <li data-it="Mensole personalizzate" data-en="Custom shelves">Mensole personalizzate</li>
+                        <li data-it="Elementi decorativi" data-en="Decorative elements">Elementi decorativi</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Materials Section -->
+    <section class="materials-section">
+        <div class="container">
+            <h2 class="section-title" data-it="Materiali e Finiture" data-en="Materials and Finishes">Materiali e Finiture</h2>
+            <div class="materials-grid">
+                <div class="material-card">
+                    <h4 data-it="Legni Pregiati" data-en="Premium Woods">Legni Pregiati</h4>
+                    <p data-it="Noce nazionale, rovere, ciliegio, frassino e essenze esotiche selezionate" data-en="Italian walnut, oak, cherry, ash and selected exotic woods">
+                        Noce nazionale, rovere, ciliegio, frassino e essenze esotiche selezionate
+                    </p>
+                </div>
+                <div class="material-card">
+                    <h4 data-it="Laccature" data-en="Lacquered Finishes">Laccature</h4>
+                    <p data-it="Laccature opache, lucide e metalliche in oltre 200 colori RAL" data-en="Matte, glossy and metallic lacquers in over 200 RAL colors">
+                        Laccature opache, lucide e metalliche in oltre 200 colori RAL
+                    </p>
+                </div>
+                <div class="material-card">
+                    <h4 data-it="Vetri e Specchi" data-en="Glass and Mirrors">Vetri e Specchi</h4>
+                    <p data-it="Vetri temperati, acidati, serigrafati e specchi bronzati" data-en="Tempered, frosted, screen-printed glass and bronzed mirrors">
+                        Vetri temperati, acidati, serigrafati e specchi bronzati
+                    </p>
+                </div>
+                <div class="material-card">
+                    <h4 data-it="Metalli" data-en="Metals">Metalli</h4>
+                    <p data-it="Acciaio, ottone, ferro e finiture galvaniche personalizzate" data-en="Steel, brass, iron and custom galvanic finishes">
+                        Acciaio, ottone, ferro e finiture galvaniche personalizzate
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="process-section">
+        <div class="container">
+            <h2 class="section-title" data-it="Il Nostro Processo" data-en="Our Process">Il Nostro Processo</h2>
+            <div class="process-steps">
+                <div class="step">
+                    <div class="step-number">01</div>
+                    <h4 data-it="Consulenza" data-en="Consultation">Consulenza</h4>
+                    <p data-it="Incontro conoscitivo per comprendere esigenze, stile e budget" data-en="Meeting to understand needs, style and budget">
+                        Incontro conoscitivo per comprendere esigenze, stile e budget
+                    </p>
+                </div>
+                <div class="step">
+                    <div class="step-number">02</div>
+                    <h4 data-it="Progettazione" data-en="Design">Progettazione</h4>
+                    <p data-it="Elaborazione disegni tecnici e rendering 3D fotorealistici" data-en="Technical drawings and photorealistic 3D renderings">
+                        Elaborazione disegni tecnici e rendering 3D fotorealistici
+                    </p>
+                </div>
+                <div class="step">
+                    <div class="step-number">03</div>
+                    <h4 data-it="Produzione" data-en="Production">Produzione</h4>
+                    <p data-it="Realizzazione artigianale nel nostro laboratorio" data-en="Artisan production in our workshop">
+                        Realizzazione artigianale nel nostro laboratorio
+                    </p>
+                </div>
+                <div class="step">
+                    <div class="step-number">04</div>
+                    <h4 data-it="Installazione" data-en="Installation">Installazione</h4>
+                    <p data-it="Posa in opera professionale e collaudo finale" data-en="Professional installation and final testing">
+                        Posa in opera professionale e collaudo finale
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2 data-it="Pronto a realizzare il tuo arredo su misura?" data-en="Ready to create your custom furniture?">
+                    Pronto a realizzare il tuo arredo su misura?
+                </h2>
+                <p data-it="Contattaci per una consulenza gratuita e scopri come trasformare i tuoi spazi" data-en="Contact us for a free consultation and discover how to transform your spaces">
+                    Contattaci per una consulenza gratuita e scopri come trasformare i tuoi spazi
+                </p>
+                <a href="contatti.html" class="btn-primary btn-large" data-it="Richiedi Informazioni" data-en="Request Information">Richiedi Informazioni</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h3>V.B.M.</h3>
+                    <p class="footer-subtitle">Ex Traditione ad Futurum</p>
+                    <p data-it="Artigianato italiano dal 1950" data-en="Italian craftsmanship since 1950">Artigianato italiano dal 1950</p>
+                </div>
+
+                <div class="footer-col">
+                    <h4 data-it="Menu" data-en="Menu">Menu</h4>
+                    <ul>
+                        <li><a href="index.html" data-it="Home" data-en="Home">Home</a></li>
+                        <li><a href="marmi.html" data-it="Marmi" data-en="Marble">Marmi</a></li>
+                        <li><a href="mobili.html" data-it="Mobili" data-en="Furniture">Mobili</a></li>
+                        <li><a href="chi-siamo.html" data-it="Chi Siamo" data-en="About Us">Chi Siamo</a></li>
+                        <li><a href="contatti.html" data-it="Contatti" data-en="Contact">Contatti</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4 data-it="Contatti" data-en="Contact">Contatti</h4>
+                    <ul>
+                        <li>📍 Via [Indirizzo], Italia</li>
+                        <li>📞 +39 [Telefono]</li>
+                        <li>✉️ info@vbm.it</li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Social</h4>
+                    <div class="social-links">
+                        <a href="#" aria-label="Instagram">📷</a>
+                        <a href="#" aria-label="Facebook">📘</a>
+                        <a href="#" aria-label="LinkedIn">💼</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 V.B.M. <span data-it="Tutti i diritti riservati." data-en="All rights reserved.">Tutti i diritti riservati.</span></p>
+                <div class="footer-links">
+                    <a href="#" data-it="Privacy Policy" data-en="Privacy Policy">Privacy Policy</a>
+                    <a href="#" data-it="Cookie Policy" data-en="Cookie Policy">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/gallery-loader.js"></script>
+</body>
+</html>
