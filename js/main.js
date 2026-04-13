@@ -11,7 +11,7 @@ function setLanguage(lang) {
     document.querySelectorAll('[data-it]').forEach(element => {
         const text = element.getAttribute(`data-${lang}`);
         if (text) {
-            element.textContent = text;
+            element.innerHTML = text;
         }
     });
 
@@ -201,30 +201,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// ========================================
-// SCROLL ANIMATIONS
-// ========================================
-const observerOptions = {
-    threshold: 0.1,
-    rootMargin: '0px 0px -100px 0px'
-};
-
-const observer = new IntersectionObserver(function(entries) {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('fade-in');
-            observer.unobserve(entry.target);
-        }
-    });
-}, observerOptions);
-
-// Observe elements for animation
-document.addEventListener('DOMContentLoaded', function() {
-    const animateElements = document.querySelectorAll('.service-card, .about-text, .about-image');
-    animateElements.forEach(el => {
-        observer.observe(el);
-    });
-});
 
 // ========================================
 // FORM VALIDATION (for contact page)
@@ -397,6 +373,51 @@ if ('IntersectionObserver' in window) {
 // ========================================
 window.addEventListener('load', function() {
     document.body.classList.add('loaded');
+});
+
+// ========================================
+// LOGO LIGHTBOX (click to zoom)
+// ========================================
+document.addEventListener('DOMContentLoaded', function() {
+    const logoImages = document.querySelectorAll('.logo-img, .logo-large');
+
+    if (logoImages.length > 0) {
+        // Create logo lightbox overlay
+        const logoOverlay = document.createElement('div');
+        logoOverlay.id = 'logo-lightbox';
+        logoOverlay.style.cssText = `
+            display:none; position:fixed; top:0; left:0; width:100%; height:100%;
+            background:rgba(0,0,0,0.85); z-index:9999; justify-content:center;
+            align-items:center; cursor:pointer;
+        `;
+        logoOverlay.innerHTML = `
+            <img src="images/logo-vbm.png" alt="V.B.M." style="max-width:80vw; max-height:80vh; object-fit:contain; pointer-events:none;">
+            <button style="position:absolute;top:20px;right:30px;background:none;border:none;color:#fff;font-size:2.5rem;cursor:pointer;line-height:1;">&times;</button>
+        `;
+        document.body.appendChild(logoOverlay);
+
+        function openLogoLightbox() {
+            logoOverlay.style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+        }
+        function closeLogoLightbox() {
+            logoOverlay.style.display = 'none';
+            document.body.style.overflow = '';
+        }
+
+        logoImages.forEach(img => {
+            img.style.cursor = 'zoom-in';
+            img.addEventListener('click', function(e) {
+                e.preventDefault();
+                openLogoLightbox();
+            });
+        });
+
+        logoOverlay.addEventListener('click', closeLogoLightbox);
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') closeLogoLightbox();
+        });
+    }
 });
 
 // ========================================

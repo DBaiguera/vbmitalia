@@ -17,10 +17,16 @@ const galleryConfig = {
         container: 'montecarlo-gallery',
         useManifest: true
     },
-    novatek: {
-        path: 'images/marmi/progetti/novatek/',
-        count: 91,
-        container: 'novatek-gallery',
+    austria: {
+        path: 'images/marmi/progetti/austria/',
+        count: 50,
+        container: 'austria-gallery',
+        useManifest: true
+    },
+    scalaUffici: {
+        path: 'images/marmi/progetti/scala-uffici/',
+        count: 50,
+        container: 'scala-uffici-gallery',
         useManifest: true
     },
     workshop: {
@@ -142,8 +148,11 @@ document.addEventListener('DOMContentLoaded', function() {
         if (document.getElementById('montecarlo-gallery')) {
             loadGallery(galleryConfig.montecarlo);
         }
-        if (document.getElementById('novatek-gallery')) {
-            loadGallery(galleryConfig.novatek);
+        if (document.getElementById('austria-gallery')) {
+            loadGallery(galleryConfig.austria);
+        }
+        if (document.getElementById('scala-uffici-gallery')) {
+            loadGallery(galleryConfig.scalaUffici);
         }
         if (document.getElementById('workshop-gallery')) {
             loadGallery(galleryConfig.workshop);

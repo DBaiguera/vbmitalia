@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <script>if(window.top===window.self&&location.hostname.indexOf('21abb')!==-1){location.replace('https://vbmitalia.com'+location.pathname);}</script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I Nostri Stabilimenti - V.B.M.</title>
+    <meta name="description" content="Scopri i laboratori e gli showroom V.B.M.: dove l'artigianato italiano prende forma.">
+    <link rel="preload" href="fonts/cormorant-600-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/montserrat-500-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/gallery.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="images/logo-vbm.png" alt="V.B.M." class="logo-img">
+                    </a>
+                </div>
+                <div class="nav-menu" id="navMenu">
+                    <a href="index.html" class="nav-link" data-it="Home" data-en="Home">Home</a>
+                    <a href="marmi.html" class="nav-link" data-it="Marmi" data-en="Marble">Marmi</a>
+                    <a href="mobili.html" class="nav-link" data-it="Mobili" data-en="Furniture">Mobili</a>
+                    <a href="progetti.html" class="nav-link" data-it="Progetti" data-en="Projects">Progetti</a>
+                    <a href="manufatti.html" class="nav-link" data-it="Manufatti<br>Speciali" data-en="Special<br>Items">Manufatti<br>Speciali</a>
+                    <a href="rendering.html" class="nav-link" data-it="Rendering<br>e Servizi" data-en="Rendering<br>&amp; Services">Rendering<br>e Servizi</a>
+                    <a href="stabilimenti.html" class="nav-link active" data-it="I Nostri<br>Stabilimenti" data-en="Our<br>Facilities">I Nostri<br>Stabilimenti</a>
+                    <a href="chi-siamo.html" class="nav-link" data-it="Chi Siamo" data-en="About Us">Chi Siamo</a>
+                    <a href="contatti.html" class="nav-link" data-it="Contatti" data-en="Contact">Contatti</a>
+                </div>
+                <div class="nav-right">
+                    <div class="language-switcher">
+                        <button class="lang-btn active" data-lang="it">IT</button>
+                        <span class="separator">|</span>
+                        <button class="lang-btn" data-lang="en">EN</button>
+                    </div>
+                    <button class="mobile-toggle" id="mobileToggle">
+                        <span></span><span></span><span></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header" style="background-image: url('images/stabilimenti/_DSC4040.jpg')">
+        <div class="page-header-overlay"></div>
+        <div class="container">
+            <h1 class="page-title" data-it="I Nostri Stabilimenti" data-en="Our Facilities">I Nostri Stabilimenti</h1>
+            <p class="page-subtitle" data-it="Dove la tradizione artigianale italiana prende forma" data-en="Where Italian artisan tradition takes shape">
+                Dove la tradizione artigianale italiana prende forma
+            </p>
+        </div>
+    </section>
+
+    <!-- Intro -->
+    <section class="intro-section">
+        <div class="container">
+            <div class="intro-content">
+                <h2 data-it="I nostri spazi, la nostra storia" data-en="Our spaces, our history">I nostri spazi, la nostra storia</h2>
+                <p data-it="I nostri stabilimenti sono il cuore pulsante di V.B.M.: laboratori all'avanguardia, showroom esclusivi e spazi di progettazione dove ogni giorno nascono capolavori artigianali. Da oltre 70 anni, questi luoghi sono testimoni della nostra dedizione alla qualità." data-en="Our facilities are the beating heart of V.B.M.: cutting-edge workshops, exclusive showrooms and design spaces where artisan masterpieces are created every day. For over 70 years, these places have witnessed our dedication to quality.">
+                    I nostri stabilimenti sono il cuore pulsante di V.B.M.: laboratori all'avanguardia, showroom esclusivi e spazi di progettazione dove ogni giorno nascono capolavori artigianali. Da oltre 70 anni, questi luoghi sono testimoni della nostra dedizione alla qualità.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Showroom & Uffici -->
+    <section class="workshop-section">
+        <div class="container">
+            <h2 class="section-title" data-it="Showroom e Uffici" data-en="Showroom and Offices">Showroom e Uffici</h2>
+            <p class="section-subtitle" data-it="Spazi progettati per ispirare e accogliere i nostri clienti" data-en="Spaces designed to inspire and welcome our clients">
+                Spazi progettati per ispirare e accogliere i nostri clienti
+            </p>
+            <div class="gallery-grid" id="stabilimenti-gallery"></div>
+        </div>
+    </section>
+
+    <!-- Laboratorio -->
+    <section class="workshop-section" style="background:#f9f7f4;">
+        <div class="container">
+            <h2 class="section-title" data-it="Il Laboratorio" data-en="The Workshop">Il Laboratorio</h2>
+            <p class="section-subtitle" data-it="Tecnologia e artigianato al servizio dell'eccellenza" data-en="Technology and craftsmanship in service of excellence">
+                Tecnologia e artigianato al servizio dell'eccellenza
+            </p>
+            <div class="gallery-grid" id="workshop-stab-gallery"></div>
+
+            <div class="services-grid-list" style="margin-top:3rem;">
+                <div class="service-item">
+                    <h3 data-it="Macchinari CNC" data-en="CNC Machinery">Macchinari CNC</h3>
+                    <p data-it="Fresatrici e centri di lavoro a controllo numerico per lavorazioni di precisione su marmo e legno" data-en="Milling machines and CNC machining centres for precision work on marble and wood">
+                        Fresatrici e centri di lavoro a controllo numerico per lavorazioni di precisione su marmo e legno
+                    </p>
+                </div>
+                <div class="service-item">
+                    <h3 data-it="Progettazione 3D" data-en="3D Design">Progettazione 3D</h3>
+                    <p data-it="Studio di progettazione dotato di software CAD/CAM e rendering fotorealistico" data-en="Design studio equipped with CAD/CAM software and photorealistic rendering">
+                        Studio di progettazione dotato di software CAD/CAM e rendering fotorealistico
+                    </p>
+                </div>
+                <div class="service-item">
+                    <h3 data-it="Parco Mezzi" data-en="Vehicle Fleet">Parco Mezzi</h3>
+                    <p data-it="Flotta di mezzi propri per il trasporto e la posa in opera su tutto il territorio" data-en="Own fleet of vehicles for transport and installation throughout the territory">
+                        Flotta di mezzi propri per il trasporto e la posa in opera su tutto il territorio
+                    </p>
+                </div>
+                <div class="service-item">
+                    <h3 data-it="Magazzino Marmi" data-en="Marble Warehouse">Magazzino Marmi</h3>
+                    <p data-it="Ampio magazzino con selezione di lastre e blocchi di marmo da tutto il mondo" data-en="Large warehouse with selection of marble slabs and blocks from around the world">
+                        Ampio magazzino con selezione di lastre e blocchi di marmo da tutto il mondo
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2 data-it="Vieni a trovarci" data-en="Come visit us">Vieni a trovarci</h2>
+                <p data-it="Prenota una visita al nostro showroom e scopri dal vivo la qualità dei nostri materiali e lavorazioni" data-en="Book a visit to our showroom and discover first-hand the quality of our materials and craftsmanship">
+                    Prenota una visita al nostro showroom e scopri dal vivo la qualità dei nostri materiali e lavorazioni
+                </p>
+                <a href="contatti.html" class="btn-primary btn-large" data-it="Prenota una Visita" data-en="Book a Visit">Prenota una Visita</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h3>V.B.M.</h3>
+                    <p class="footer-subtitle">Ex Traditione ad Futurum</p>
+                    <p data-it="Artigianato italiano dal 1950" data-en="Italian craftsmanship since 1950">Artigianato italiano dal 1950</p>
+                </div>
+                <div class="footer-col">
+                    <h4 data-it="Menu" data-en="Menu">Menu</h4>
+                    <ul>
+                        <li><a href="index.html" data-it="Home" data-en="Home">Home</a></li>
+                        <li><a href="marmi.html" data-it="Marmi" data-en="Marble">Marmi</a></li>
+                        <li><a href="mobili.html" data-it="Mobili" data-en="Furniture">Mobili</a></li>
+                        <li><a href="progetti.html" data-it="Progetti" data-en="Projects">Progetti</a></li>
+                        <li><a href="chi-siamo.html" data-it="Chi Siamo" data-en="About Us">Chi Siamo</a></li>
+                        <li><a href="contatti.html" data-it="Contatti" data-en="Contact">Contatti</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 data-it="Contatti" data-en="Contact">Contatti</h4>
+                    <ul>
+                        <li>📍 Via [Indirizzo], Italia</li>
+                        <li>📞 +39 [Telefono]</li>
+                        <li>✉️ info@vbm.it</li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Social</h4>
+                    <div class="social-links">
+                        <a href="#" aria-label="Instagram">📷</a>
+                        <a href="#" aria-label="Facebook">📘</a>
+                        <a href="#" aria-label="LinkedIn">💼</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 V.B.M. <span data-it="Tutti i diritti riservati." data-en="All rights reserved.">Tutti i diritti riservati.</span></p>
+                <div class="footer-links">
+                    <a href="#" data-it="Privacy Policy" data-en="Privacy Policy">Privacy Policy</a>
+                    <a href="#" data-it="Cookie Policy" data-en="Cookie Policy">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/gallery-loader.js"></script>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        loadGallery({ path: 'images/stabilimenti/', container: 'stabilimenti-gallery', count: 19, useManifest: true });
+        loadGallery({ path: 'images/marmi/laboratorio/', container: 'workshop-stab-gallery', count: 30, useManifest: true });
+    });
+    </script>
+</body>
+</html>

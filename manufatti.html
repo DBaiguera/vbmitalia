@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <script>if(window.top===window.self&&location.hostname.indexOf('21abb')!==-1){location.replace('https://vbmitalia.com'+location.pathname);}</script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manufatti Speciali - V.B.M.</title>
+    <meta name="description" content="Manufatti speciali, oggetti di arredo esclusivi e pezzi fuori dal comune su misura. L'artigianato italiano oltre i confini del convenzionale.">
+    <link rel="preload" href="fonts/cormorant-600-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/montserrat-500-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/gallery.css">
+    <style>
+        .category-showcase {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+        .showcase-card {
+            background: #fff;
+            border: 1px solid #e8e0d5;
+            padding: 2.5rem 2rem;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .showcase-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+        }
+        .showcase-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        .showcase-card h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.5rem;
+            color: #2c2c2c;
+            margin-bottom: 0.8rem;
+        }
+        .showcase-card p { color: #666; line-height: 1.7; font-size: 0.95rem; }
+        .manifesto-section {
+            background: #2c2c2c;
+            color: #fff;
+            padding: 6rem 0;
+            text-align: center;
+        }
+        .manifesto-section h2 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 3rem;
+            color: #c9a882;
+            margin-bottom: 1.5rem;
+        }
+        .manifesto-section p { font-size: 1.1rem; line-height: 1.9; max-width: 700px; margin: 0 auto 1.5rem; opacity: 0.9; }
+        @media (max-width: 768px) {
+            .category-showcase { grid-template-columns: 1fr; }
+            .manifesto-section h2 { font-size: 2rem; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="images/logo-vbm.png" alt="V.B.M." class="logo-img">
+                    </a>
+                </div>
+                <div class="nav-menu" id="navMenu">
+                    <a href="index.html" class="nav-link" data-it="Home" data-en="Home">Home</a>
+                    <a href="marmi.html" class="nav-link" data-it="Marmi" data-en="Marble">Marmi</a>
+                    <a href="mobili.html" class="nav-link" data-it="Mobili" data-en="Furniture">Mobili</a>
+                    <a href="progetti.html" class="nav-link" data-it="Progetti" data-en="Projects">Progetti</a>
+                    <a href="manufatti.html" class="nav-link active" data-it="Manufatti<br>Speciali" data-en="Special<br>Items">Manufatti<br>Speciali</a>
+                    <a href="rendering.html" class="nav-link" data-it="Rendering<br>e Servizi" data-en="Rendering<br>&amp; Services">Rendering<br>e Servizi</a>
+                    <a href="stabilimenti.html" class="nav-link" data-it="I Nostri<br>Stabilimenti" data-en="Our<br>Facilities">I Nostri<br>Stabilimenti</a>
+                    <a href="chi-siamo.html" class="nav-link" data-it="Chi Siamo" data-en="About Us">Chi Siamo</a>
+                    <a href="contatti.html" class="nav-link" data-it="Contatti" data-en="Contact">Contatti</a>
+                </div>
+                <div class="nav-right">
+                    <div class="language-switcher">
+                        <button class="lang-btn active" data-lang="it">IT</button>
+                        <span class="separator">|</span>
+                        <button class="lang-btn" data-lang="en">EN</button>
+                    </div>
+                    <button class="mobile-toggle" id="mobileToggle">
+                        <span></span><span></span><span></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header" style="background-image: url('images/marmi-header.jpg')">
+        <div class="page-header-overlay"></div>
+        <div class="container">
+            <h1 class="page-title" data-it="Manufatti Speciali" data-en="Special Items">Manufatti Speciali</h1>
+            <p class="page-subtitle" data-it="Oggetti unici, fuori dal comune, su misura" data-en="Unique objects, extraordinary, custom made">
+                Oggetti unici, fuori dal comune, su misura
+            </p>
+        </div>
+    </section>
+
+    <!-- Manifesto -->
+    <div class="manifesto-section">
+        <div class="container">
+            <h2 data-it="Oltre i Confini del Convenzionale" data-en="Beyond the Boundaries of Convention">Oltre i Confini del Convenzionale</h2>
+            <p data-it="V.B.M. non si limita all'arredamento tradizionale. La nostra maestria artigianale ci permette di realizzare oggetti straordinari: pezzi unici che diventano opere d'arte, elementi decorativi di grande impatto, manufatti che nascono da idee ambiziose e vengono realizzati con la stessa cura e precisione dei nostri progetti più importanti." data-en="V.B.M. is not limited to traditional furnishings. Our artisan mastery allows us to create extraordinary objects: unique pieces that become works of art, decorative elements of great impact, artifacts born from ambitious ideas and created with the same care and precision as our most important projects.">
+                V.B.M. non si limita all'arredamento tradizionale. La nostra maestria artigianale ci permette di realizzare oggetti straordinari: pezzi unici che diventano opere d'arte, elementi decorativi di grande impatto, manufatti che nascono da idee ambiziose e vengono realizzati con la stessa cura e precisione dei nostri progetti più importanti.
+            </p>
+            <p data-it="Se l'idea esiste, noi possiamo realizzarla." data-en="If the idea exists, we can create it.">
+                <em>Se l'idea esiste, noi possiamo realizzarla.</em>
+            </p>
+        </div>
+    </div>
+
+    <!-- Manufatti Speciali -->
+    <section class="projects-section">
+        <div class="container">
+            <h2 class="section-title" data-it="Manufatti Speciali" data-en="Special Manufactured Items">Manufatti Speciali</h2>
+            <p class="section-subtitle" data-it="Lavorazioni in marmo e legno di straordinaria complessità tecnica" data-en="Marble and wood work of extraordinary technical complexity">
+                Lavorazioni in marmo e legno di straordinaria complessità tecnica
+            </p>
+            <div class="category-showcase">
+                <div class="showcase-card">
+                    <div class="showcase-icon">🗿</div>
+                    <h3 data-it="Sculture in Marmo" data-en="Marble Sculptures">Sculture in Marmo</h3>
+                    <p data-it="Sculture decorative, bassorilievi e opere d'arte su commissione in marmo e pietre naturali di pregio" data-en="Decorative sculptures, bas-reliefs and commissioned artworks in marble and precious natural stones">
+                        Sculture decorative, bassorilievi e opere d'arte su commissione in marmo e pietre naturali di pregio
+                    </p>
+                </div>
+                <div class="showcase-card">
+                    <div class="showcase-icon">🕌</div>
+                    <h3 data-it="Elementi Architettonici" data-en="Architectural Elements">Elementi Architettonici</h3>
+                    <p data-it="Colonne, capitelli, cornici, mensole e elementi decorativi architettonici realizzati su disegno" data-en="Columns, capitals, cornices, brackets and architectural decorative elements made to design">
+                        Colonne, capitelli, cornici, mensole e elementi decorativi architettonici realizzati su disegno
+                    </p>
+                </div>
+                <div class="showcase-card">
+                    <div class="showcase-icon">🔥</div>
+                    <h3 data-it="Camini d'Arte" data-en="Artistic Fireplaces">Camini d'Arte</h3>
+                    <p data-it="Camini monumentali e decorativi in marmo scolpito, pezzi unici che diventano il cuore della stanza" data-en="Monumental and decorative fireplaces in carved marble, unique pieces that become the heart of the room">
+                        Camini monumentali e decorativi in marmo scolpito, pezzi unici che diventano il cuore della stanza
+                    </p>
+                </div>
+            </div>
+            <div class="gallery-grid" id="manufatti-gallery"></div>
+        </div>
+    </section>
+
+    <!-- Oggetti di Arredo -->
+    <section class="projects-section" style="background:#f9f7f4;">
+        <div class="container">
+            <h2 class="section-title" data-it="Oggetti di Arredo" data-en="Furnishing Objects">Oggetti di Arredo</h2>
+            <p class="section-subtitle" data-it="Design e artigianato in pezzi da collezione" data-en="Design and craftsmanship in collector's pieces">
+                Design e artigianato in pezzi da collezione
+            </p>
+            <div class="category-showcase">
+                <div class="showcase-card">
+                    <div class="showcase-icon">🪨</div>
+                    <h3 data-it="Tavoli d'Arte" data-en="Art Tables">Tavoli d'Arte</h3>
+                    <p data-it="Tavoli con piani in marmo unico e basi in legno o metallo lavorato. Ogni pezzo è irripetibile, come la vena del marmo che lo caratterizza." data-en="Tables with unique marble tops and crafted wood or metal bases. Each piece is unrepeatable, like the marble vein that characterizes it.">
+                        Tavoli con piani in marmo unico e basi in legno o metallo lavorato. Ogni pezzo è irripetibile, come la vena del marmo che lo caratterizza.
+                    </p>
+                </div>
+                <div class="showcase-card">
+                    <div class="showcase-icon">🏺</div>
+                    <h3 data-it="Elementi Decorativi" data-en="Decorative Elements">Elementi Decorativi</h3>
+                    <p data-it="Vasi, alzate, porta-oggetti e complementi in marmo lavorato, design italiano per spazi di lusso" data-en="Vases, risers, object holders and marble accessories, Italian design for luxury spaces">
+                        Vasi, alzate, porta-oggetti e complementi in marmo lavorato, design italiano per spazi di lusso
+                    </p>
+                </div>
+                <div class="showcase-card">
+                    <div class="showcase-icon">🛁</div>
+                    <h3 data-it="Vasche e Lavabi" data-en="Baths and Washbasins">Vasche e Lavabi</h3>
+                    <p data-it="Vasche da bagno e lavabi monolitici ricavati da un unico blocco di marmo pregiato. Il lusso nella sua forma più pura." data-en="Monolithic bathtubs and washbasins carved from a single block of precious marble. Luxury in its purest form.">
+                        Vasche da bagno e lavabi monolitici ricavati da un unico blocco di marmo pregiato. Il lusso nella sua forma più pura.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Fuori dal Comune -->
+    <section class="projects-section">
+        <div class="container">
+            <h2 class="section-title" data-it="Fuori dal Comune, Su Misura" data-en="Extraordinary, Custom Made">Fuori dal Comune, Su Misura</h2>
+            <p class="section-subtitle" data-it="Le idee più ambiziose, realizzate senza compromessi" data-en="The most ambitious ideas, realized without compromise">
+                Le idee più ambiziose, realizzate senza compromessi
+            </p>
+            <div class="services-grid-list">
+                <div class="service-item">
+                    <h3 data-it="Arredi Nautici" data-en="Nautical Furnishings">Arredi Nautici</h3>
+                    <p data-it="Interni per yacht e barche di lusso in legno e marmo, progettati per resistere all'ambiente marino" data-en="Interiors for luxury yachts and boats in wood and marble, designed to withstand the marine environment">
+                        Interni per yacht e barche di lusso in legno e marmo, progettati per resistere all'ambiente marino
+                    </p>
+                </div>
+                <div class="service-item">
+                    <h3 data-it="Arte Pubblica" data-en="Public Art">Arte Pubblica</h3>
+                    <p data-it="Installazioni, monumenti e opere site-specific per spazi pubblici, piazze e edifici istituzionali" data-en="Installations, monuments and site-specific works for public spaces, squares and institutional buildings">
+                        Installazioni, monumenti e opere site-specific per spazi pubblici, piazze e edifici istituzionali
+                    </p>
+                </div>
+                <div class="service-item">
+                    <h3 data-it="Collezioni Private" data-en="Private Collections">Collezioni Private</h3>
+                    <p data-it="Oggetti da collezione su commissione: pezzi unici in marmi rari e legni esotici per collezionisti esigenti" data-en="Commissioned collector's objects: unique pieces in rare marbles and exotic woods for discerning collectors">
+                        Oggetti da collezione su commissione: pezzi unici in marmi rari e legni esotici per collezionisti esigenti
+                    </p>
+                </div>
+                <div class="service-item">
+                    <h3 data-it="Set e Scenografie" data-en="Sets and Scenography">Set e Scenografie</h3>
+                    <p data-it="Elementi per set fotografici, cinematografici e allestimenti fieristici di alto livello" data-en="Elements for photo sets, film productions and high-level trade fair installations">
+                        Elementi per set fotografici, cinematografici e allestimenti fieristici di alto livello
+                    </p>
+                </div>
+                <div class="service-item">
+                    <h3 data-it="Gioielleria d'Arredo" data-en="Decorative Jewelry">Gioielleria d'Arredo</h3>
+                    <p data-it="Oggetti preziosi per la casa: porta-gioielli, scatole, vassoi e complementi in marmi rari e legni pregiati" data-en="Precious home objects: jewelry boxes, boxes, trays and accessories in rare marbles and precious woods">
+                        Oggetti preziosi per la casa: porta-gioielli, scatole, vassoi e complementi in marmi rari e legni pregiati
+                    </p>
+                </div>
+                <div class="service-item">
+                    <h3 data-it="Su Richiesta" data-en="On Request">Su Richiesta</h3>
+                    <p data-it="Ogni idea è benvenuta. Contattateci per discutere il vostro progetto speciale: troveremo insieme il modo di realizzarlo." data-en="Every idea is welcome. Contact us to discuss your special project: we'll find a way to realize it together.">
+                        Ogni idea è benvenuta. Contattateci per discutere il vostro progetto speciale: troveremo insieme il modo di realizzarlo.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2 data-it="Hai un'idea fuori dal comune?" data-en="Do you have an extraordinary idea?">Hai un'idea fuori dal comune?</h2>
+                <p data-it="Raccontacela. Non esistono progetti impossibili, solo quelli che non abbiamo ancora immaginato." data-en="Tell us about it. There are no impossible projects, only those we haven't yet imagined.">
+                    Raccontacela. Non esistono progetti impossibili, solo quelli che non abbiamo ancora immaginato.
+                </p>
+                <a href="contatti.html" class="btn-primary btn-large" data-it="Parla con Noi" data-en="Talk to Us">Parla con Noi</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h3>V.B.M.</h3>
+                    <p class="footer-subtitle">Ex Traditione ad Futurum</p>
+                    <p data-it="Artigianato italiano dal 1950" data-en="Italian craftsmanship since 1950">Artigianato italiano dal 1950</p>
+                </div>
+                <div class="footer-col">
+                    <h4 data-it="Menu" data-en="Menu">Menu</h4>
+                    <ul>
+                        <li><a href="index.html" data-it="Home" data-en="Home">Home</a></li>
+                        <li><a href="marmi.html" data-it="Marmi" data-en="Marble">Marmi</a></li>
+                        <li><a href="mobili.html" data-it="Mobili" data-en="Furniture">Mobili</a></li>
+                        <li><a href="progetti.html" data-it="Progetti" data-en="Projects">Progetti</a></li>
+                        <li><a href="manufatti.html" data-it="Manufatti Speciali" data-en="Special Items">Manufatti Speciali</a></li>
+                        <li><a href="chi-siamo.html" data-it="Chi Siamo" data-en="About Us">Chi Siamo</a></li>
+                        <li><a href="contatti.html" data-it="Contatti" data-en="Contact">Contatti</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 data-it="Contatti" data-en="Contact">Contatti</h4>
+                    <ul>
+                        <li>📍 Via [Indirizzo], Italia</li>
+                        <li>📞 +39 [Telefono]</li>
+                        <li>✉️ info@vbm.it</li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Social</h4>
+                    <div class="social-links">
+                        <a href="#" aria-label="Instagram">📷</a>
+                        <a href="#" aria-label="Facebook">📘</a>
+                        <a href="#" aria-label="LinkedIn">💼</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 V.B.M. <span data-it="Tutti i diritti riservati." data-en="All rights reserved.">Tutti i diritti riservati.</span></p>
+                <div class="footer-links">
+                    <a href="#" data-it="Privacy Policy" data-en="Privacy Policy">Privacy Policy</a>
+                    <a href="#" data-it="Cookie Policy" data-en="Cookie Policy">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/gallery-loader.js"></script>
+</body>
+</html>

@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <script>if(window.top===window.self&&location.hostname.indexOf('21abb')!==-1){location.replace('https://vbmitalia.com'+location.pathname);}</script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rendering e Servizi - V.B.M.</title>
+    <meta name="description" content="Rendering 3D fotorealistici e servizi di progettazione personalizzata per marmi e mobili su misura.">
+    <link rel="preload" href="fonts/cormorant-600-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/montserrat-500-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/gallery.css">
+    <style>
+        .service-block {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            margin-bottom: 5rem;
+        }
+        .service-block.reverse { direction: rtl; }
+        .service-block.reverse > * { direction: ltr; }
+        .service-block-text h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2rem;
+            color: #2c2c2c;
+            margin-bottom: 1rem;
+        }
+        .service-block-text p { color: #555; line-height: 1.8; margin-bottom: 1rem; }
+        .service-block-image img { width: 100%; height: 400px; object-fit: cover; }
+        .process-timeline { counter-reset: step; }
+        .process-step { display: flex; gap: 2rem; margin-bottom: 2rem; align-items: flex-start; }
+        .process-step-num {
+            counter-increment: step;
+            min-width: 56px; height: 56px;
+            background: #8b7355; color: #fff;
+            border-radius: 50%; display: flex; align-items: center; justify-content: center;
+            font-family: 'Cormorant Garamond', serif; font-size: 1.4rem; font-weight: 600;
+        }
+        .process-step-num::before { content: counter(step, decimal-leading-zero); }
+        .process-step-content h4 { font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; margin-bottom: 0.4rem; }
+        .process-step-content p { color: #666; line-height: 1.7; }
+        @media (max-width: 768px) {
+            .service-block { grid-template-columns: 1fr; gap: 2rem; }
+            .service-block.reverse { direction: ltr; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="images/logo-vbm.png" alt="V.B.M." class="logo-img">
+                    </a>
+                </div>
+                <div class="nav-menu" id="navMenu">
+                    <a href="index.html" class="nav-link" data-it="Home" data-en="Home">Home</a>
+                    <a href="marmi.html" class="nav-link" data-it="Marmi" data-en="Marble">Marmi</a>
+                    <a href="mobili.html" class="nav-link" data-it="Mobili" data-en="Furniture">Mobili</a>
+                    <a href="progetti.html" class="nav-link" data-it="Progetti" data-en="Projects">Progetti</a>
+                    <a href="manufatti.html" class="nav-link" data-it="Manufatti<br>Speciali" data-en="Special<br>Items">Manufatti<br>Speciali</a>
+                    <a href="rendering.html" class="nav-link active" data-it="Rendering<br>e Servizi" data-en="Rendering<br>&amp; Services">Rendering<br>e Servizi</a>
+                    <a href="stabilimenti.html" class="nav-link" data-it="I Nostri<br>Stabilimenti" data-en="Our<br>Facilities">I Nostri<br>Stabilimenti</a>
+                    <a href="chi-siamo.html" class="nav-link" data-it="Chi Siamo" data-en="About Us">Chi Siamo</a>
+                    <a href="contatti.html" class="nav-link" data-it="Contatti" data-en="Contact">Contatti</a>
+                </div>
+                <div class="nav-right">
+                    <div class="language-switcher">
+                        <button class="lang-btn active" data-lang="it">IT</button>
+                        <span class="separator">|</span>
+                        <button class="lang-btn" data-lang="en">EN</button>
+                    </div>
+                    <button class="mobile-toggle" id="mobileToggle">
+                        <span></span><span></span><span></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header" style="background-image: url('images/mobili-header.jpg')">
+        <div class="page-header-overlay"></div>
+        <div class="container">
+            <h1 class="page-title" data-it="Rendering e Servizi" data-en="Rendering & Services">Rendering e Servizi</h1>
+            <p class="page-subtitle" data-it="Dal progetto alla realtà, ogni dettaglio visualizzato in anticipo" data-en="From project to reality, every detail visualized in advance">
+                Dal progetto alla realtà, ogni dettaglio visualizzato in anticipo
+            </p>
+        </div>
+    </section>
+
+    <!-- Intro -->
+    <section class="intro-section">
+        <div class="container">
+            <div class="intro-content">
+                <h2 data-it="Vedere per credere" data-en="Seeing is believing">Vedere per credere</h2>
+                <p data-it="Prima di iniziare qualsiasi lavorazione, offriamo ai nostri clienti la possibilità di visualizzare il risultato finale attraverso rendering 3D fotorealistici ad alta risoluzione. Un investimento nel dialogo e nella chiarezza, per eliminare ogni incertezza e procedere con sicurezza." data-en="Before starting any work, we offer our clients the possibility of visualizing the final result through high-resolution photorealistic 3D renderings. An investment in dialogue and clarity, to eliminate any uncertainty and proceed with confidence.">
+                    Prima di iniziare qualsiasi lavorazione, offriamo ai nostri clienti la possibilità di visualizzare il risultato finale attraverso rendering 3D fotorealistici ad alta risoluzione. Un investimento nel dialogo e nella chiarezza, per eliminare ogni incertezza e procedere con sicurezza.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section class="services-list">
+        <div class="container">
+            <h2 class="section-title" data-it="I Nostri Servizi" data-en="Our Services">I Nostri Servizi</h2>
+
+            <div class="service-block">
+                <div class="service-block-text">
+                    <h3 data-it="Rendering 3D Fotorealistico" data-en="Photorealistic 3D Rendering">Rendering 3D Fotorealistico</h3>
+                    <p data-it="Realizziamo rendering 3D fotorealistici che permettono di visualizzare con precisione ogni materiale, texture e fonte di luce prima della realizzazione. Il cliente vede il risultato finale prima ancora di iniziare i lavori." data-en="We create photorealistic 3D renderings that allow precise visualization of every material, texture and light source before production. The client sees the final result even before starting work.">
+                        Realizziamo rendering 3D fotorealistici che permettono di visualizzare con precisione ogni materiale, texture e fonte di luce prima della realizzazione. Il cliente vede il risultato finale prima ancora di iniziare i lavori.
+                    </p>
+                    <p data-it="I nostri rendering vengono prodotti con software professionali di ultima generazione, garantendo una resa visiva di altissima qualità." data-en="Our renderings are produced with the latest generation professional software, guaranteeing very high visual quality.">
+                        I nostri rendering vengono prodotti con software professionali di ultima generazione, garantendo una resa visiva di altissima qualità.
+                    </p>
+                </div>
+                <div class="service-block-image">
+                    <img src="images/mobili/photo_1_2026-01-23_09-09-01.jpg" alt="Rendering 3D" onerror="this.parentElement.style.display='none'">
+                </div>
+            </div>
+
+            <div class="service-block reverse">
+                <div class="service-block-text">
+                    <h3 data-it="Progettazione CAD" data-en="CAD Design">Progettazione CAD</h3>
+                    <p data-it="Il nostro ufficio tecnico elabora disegni CAD di precisione per ogni elemento: scale, pavimenti, mobili, rivestimenti. Ogni tavola tecnica è completa di tutte le misure e i dettagli costruttivi necessari alla realizzazione." data-en="Our technical office prepares precision CAD drawings for every element: stairs, floors, furniture, coverings. Every technical drawing is complete with all measurements and construction details necessary for production.">
+                        Il nostro ufficio tecnico elabora disegni CAD di precisione per ogni elemento: scale, pavimenti, mobili, rivestimenti. Ogni tavola tecnica è completa di tutte le misure e i dettagli costruttivi necessari alla realizzazione.
+                    </p>
+                </div>
+                <div class="service-block-image">
+                    <img src="images/storia/altromateriale_1.jpg" alt="Progettazione CAD" onerror="this.parentElement.style.display='none'">
+                </div>
+            </div>
+
+            <div class="service-block">
+                <div class="service-block-text">
+                    <h3 data-it="Consulenza Materiali" data-en="Materials Consultation">Consulenza Materiali</h3>
+                    <p data-it="I nostri esperti guidano il cliente nella scelta dei materiali più adatti al progetto: tipo di marmo, essenza di legno, finiture, colori. Una consulenza completa che include anche la visita al nostro showroom dove è possibile vedere e toccare ogni materiale." data-en="Our experts guide the client in choosing the most suitable materials for the project: type of marble, wood species, finishes, colors. A complete consultation that also includes a visit to our showroom where every material can be seen and touched.">
+                        I nostri esperti guidano il cliente nella scelta dei materiali più adatti al progetto: tipo di marmo, essenza di legno, finiture, colori. Una consulenza completa che include anche la visita al nostro showroom dove è possibile vedere e toccare ogni materiale.
+                    </p>
+                </div>
+                <div class="service-block-image">
+                    <img src="images/stabilimenti/_DSC4063.jpg" alt="Consulenza Materiali" onerror="this.parentElement.style.display='none'">
+                </div>
+            </div>
+
+            <div class="service-block reverse">
+                <div class="service-block-text">
+                    <h3 data-it="Gestione Cantiere" data-en="Site Management">Gestione Cantiere</h3>
+                    <p data-it="Seguiamo il progetto dalla consegna dei materiali fino alla posa in opera finale. Un coordinamento completo con i direttori dei lavori, gli architetti e le imprese edili per garantire che tutto avvenga nei tempi previsti e con la massima cura." data-en="We follow the project from material delivery to final installation. Complete coordination with project managers, architects and construction companies to ensure everything happens on time and with the utmost care.">
+                        Seguiamo il progetto dalla consegna dei materiali fino alla posa in opera finale. Un coordinamento completo con i direttori dei lavori, gli architetti e le imprese edili per garantire che tutto avvenga nei tempi previsti e con la massima cura.
+                    </p>
+                </div>
+                <div class="service-block-image">
+                    <img src="images/stabilimenti/parco-mezzi.jpg" alt="Gestione Cantiere" onerror="this.parentElement.style.display='none'">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process -->
+    <section class="process-section">
+        <div class="container">
+            <h2 class="section-title" data-it="Il Nostro Processo" data-en="Our Process">Il Nostro Processo</h2>
+            <div class="process-timeline">
+                <div class="process-step">
+                    <div class="process-step-num"></div>
+                    <div class="process-step-content">
+                        <h4 data-it="Sopralluogo e Briefing" data-en="Site Visit and Briefing">Sopralluogo e Briefing</h4>
+                        <p data-it="Visita del cantiere o degli spazi, raccolta delle misure e comprensione delle esigenze del cliente" data-en="Site visit, taking measurements and understanding client needs">
+                            Visita del cantiere o degli spazi, raccolta delle misure e comprensione delle esigenze del cliente
+                        </p>
+                    </div>
+                </div>
+                <div class="process-step">
+                    <div class="process-step-num"></div>
+                    <div class="process-step-content">
+                        <h4 data-it="Proposta e Rendering" data-en="Proposal and Rendering">Proposta e Rendering</h4>
+                        <p data-it="Elaborazione della proposta progettuale con rendering 3D e selezione dei materiali" data-en="Development of the project proposal with 3D renderings and material selection">
+                            Elaborazione della proposta progettuale con rendering 3D e selezione dei materiali
+                        </p>
+                    </div>
+                </div>
+                <div class="process-step">
+                    <div class="process-step-num"></div>
+                    <div class="process-step-content">
+                        <h4 data-it="Approvazione e Produzione" data-en="Approval and Production">Approvazione e Produzione</h4>
+                        <p data-it="Una volta approvato il progetto, avvio della produzione nel nostro laboratorio" data-en="Once the project is approved, production begins in our workshop">
+                            Una volta approvato il progetto, avvio della produzione nel nostro laboratorio
+                        </p>
+                    </div>
+                </div>
+                <div class="process-step">
+                    <div class="process-step-num"></div>
+                    <div class="process-step-content">
+                        <h4 data-it="Consegna e Posa" data-en="Delivery and Installation">Consegna e Posa</h4>
+                        <p data-it="Trasporto, posa in opera e collaudo finale con nostra squadra specializzata" data-en="Transport, installation and final testing with our specialized team">
+                            Trasporto, posa in opera e collaudo finale con nostra squadra specializzata
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2 data-it="Richiedi il tuo rendering gratuito" data-en="Request your free rendering">Richiedi il tuo rendering gratuito</h2>
+                <p data-it="Contattaci con le misure e le tue idee: creeremo un rendering 3D per mostrarti come potrebbe essere il tuo spazio" data-en="Contact us with your measurements and ideas: we'll create a 3D rendering to show you how your space could look">
+                    Contattaci con le misure e le tue idee: creeremo un rendering 3D per mostrarti come potrebbe essere il tuo spazio
+                </p>
+                <a href="contatti.html" class="btn-primary btn-large" data-it="Contattaci" data-en="Contact Us">Contattaci</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h3>V.B.M.</h3>
+                    <p class="footer-subtitle">Ex Traditione ad Futurum</p>
+                    <p data-it="Artigianato italiano dal 1950" data-en="Italian craftsmanship since 1950">Artigianato italiano dal 1950</p>
+                </div>
+                <div class="footer-col">
+                    <h4 data-it="Menu" data-en="Menu">Menu</h4>
+                    <ul>
+                        <li><a href="index.html" data-it="Home" data-en="Home">Home</a></li>
+                        <li><a href="marmi.html" data-it="Marmi" data-en="Marble">Marmi</a></li>
+                        <li><a href="mobili.html" data-it="Mobili" data-en="Furniture">Mobili</a></li>
+                        <li><a href="progetti.html" data-it="Progetti" data-en="Projects">Progetti</a></li>
+                        <li><a href="chi-siamo.html" data-it="Chi Siamo" data-en="About Us">Chi Siamo</a></li>
+                        <li><a href="contatti.html" data-it="Contatti" data-en="Contact">Contatti</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 data-it="Contatti" data-en="Contact">Contatti</h4>
+                    <ul>
+                        <li>📍 Via [Indirizzo], Italia</li>
+                        <li>📞 +39 [Telefono]</li>
+                        <li>✉️ info@vbm.it</li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Social</h4>
+                    <div class="social-links">
+                        <a href="#" aria-label="Instagram">📷</a>
+                        <a href="#" aria-label="Facebook">📘</a>
+                        <a href="#" aria-label="LinkedIn">💼</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 V.B.M. <span data-it="Tutti i diritti riservati." data-en="All rights reserved.">Tutti i diritti riservati.</span></p>
+                <div class="footer-links">
+                    <a href="#" data-it="Privacy Policy" data-en="Privacy Policy">Privacy Policy</a>
+                    <a href="#" data-it="Cookie Policy" data-en="Cookie Policy">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/gallery-loader.js"></script>
+</body>
+</html>
