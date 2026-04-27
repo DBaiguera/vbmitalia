@@ -25,7 +25,7 @@
 .chisiamo-title {
     font-family: 'Cormorant Garamond', serif;
     font-size: 48px;
-    color: #2c2c2c;
+    color: #f5ede0;
     letter-spacing: 3px;
     margin-bottom: 20px;
 }
@@ -371,11 +371,74 @@
 }
 
 /* ========================================
+   SPLIT HEADER (STABILIMENTI)
+   ======================================== */
+.split-header {
+    position: relative;
+    display: flex;
+    height: 600px;
+    margin-top: 0;
+    margin-bottom: 0;
+    overflow: hidden;
+}
+
+.split-half {
+    flex: 1;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding-bottom: 30px;
+}
+
+.split-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.45);
+}
+
+.split-label {
+    position: relative;
+    z-index: 2;
+    color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    opacity: 0.85;
+}
+
+.split-header-title {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 3;
+    pointer-events: none;
+}
+
+.split-header-title .page-title {
+    text-shadow: 2px 2px 15px rgba(0,0,0,0.6);
+}
+
+@media (max-width: 768px) {
+    .split-header {
+        flex-direction: column;
+        height: 400px;
+    }
+}
+
+/* ========================================
    LOGO SECTION (CHI SIAMO)
    ======================================== */
 .logo-section {
-    padding: 80px 0;
-    background: linear-gradient(135deg, #f8f6f3, #ffffff);
+    padding: 80px 0 80px 0;
+    padding-top: 130px;
+    margin-top: 90px;
+    background: linear-gradient(135deg, #2c2420 0%, #5a3e2b 35%, #8b6340 60%, #c9a882 100%);
     text-align: center;
 }
 
@@ -399,7 +462,7 @@
     font-family: 'Cormorant Garamond', serif;
     font-size: 28px;
     font-style: italic;
-    color: #8b7355;
+    color: #f5ede0;
     margin-top: 30px;
     font-weight: 500;
     letter-spacing: 2px;

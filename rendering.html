@@ -29,6 +29,12 @@
         }
         .service-block-text p { color: #555; line-height: 1.8; margin-bottom: 1rem; }
         .service-block-image img { width: 100%; height: 400px; object-fit: cover; }
+        .split-materials { display: flex; height: 400px; overflow: hidden; }
+        .split-mat-half { flex: 1; background-size: cover; background-position: center; position: relative; display: flex; align-items: flex-end; justify-content: center; padding-bottom: 16px; }
+        .split-mat-half::after { content: ''; position: absolute; inset: 0; background: rgba(0,0,0,0.35); }
+        .split-mat-label { position: relative; z-index: 2; color: #fff; font-family: 'Montserrat', sans-serif; font-size: 12px; letter-spacing: 2px; text-transform: uppercase; }
+        .service-block-image--placeholder { background: #f0ece6; display: flex; align-items: center; justify-content: center; min-height: 400px; color: #aaa; font-style: italic; font-size: 14px; }
+        .service-block-image--placeholder::after { content: 'Foto in arrivo'; }
         .process-timeline { counter-reset: step; }
         .process-step { display: flex; gap: 2rem; margin-bottom: 2rem; align-items: flex-start; }
         .process-step-num {
@@ -133,31 +139,38 @@
                     </p>
                 </div>
                 <div class="service-block-image">
-                    <img src="images/storia/altromateriale_1.jpg" alt="Progettazione CAD" onerror="this.parentElement.style.display='none'">
+                    <img src="images/stabilimenti/_DSC4058.jpg" alt="Ufficio Tecnico" onerror="this.parentElement.style.display='none'">
                 </div>
             </div>
 
             <div class="service-block">
                 <div class="service-block-text">
                     <h3 data-it="Consulenza Materiali" data-en="Materials Consultation">Consulenza Materiali</h3>
-                    <p data-it="I nostri esperti guidano il cliente nella scelta dei materiali più adatti al progetto: tipo di marmo, essenza di legno, finiture, colori. Una consulenza completa che include anche la visita al nostro showroom dove è possibile vedere e toccare ogni materiale." data-en="Our experts guide the client in choosing the most suitable materials for the project: type of marble, wood species, finishes, colors. A complete consultation that also includes a visit to our showroom where every material can be seen and touched.">
-                        I nostri esperti guidano il cliente nella scelta dei materiali più adatti al progetto: tipo di marmo, essenza di legno, finiture, colori. Una consulenza completa che include anche la visita al nostro showroom dove è possibile vedere e toccare ogni materiale.
+                    <p data-it="I nostri esperti guidano il cliente nella scelta dei materiali più adatti al progetto: tipo di marmo, essenza di legno, finiture, colori. Una consulenza completa per vedere e toccare ogni materiale prima di scegliere." data-en="Our experts guide the client in choosing the most suitable materials for the project: type of marble, wood species, finishes, colors. A complete consultation to see and touch every material before choosing.">
+                        I nostri esperti guidano il cliente nella scelta dei materiali più adatti al progetto: tipo di marmo, essenza di legno, finiture, colori. Una consulenza completa per vedere e toccare ogni materiale prima di scegliere.
                     </p>
                 </div>
                 <div class="service-block-image">
-                    <img src="images/stabilimenti/_DSC4063.jpg" alt="Consulenza Materiali" onerror="this.parentElement.style.display='none'">
+                    <div class="split-materials">
+                        <div class="split-mat-half" style="background-image: url('images/marmi/laboratorio/20241210_073649.jpg')">
+                            <div class="split-mat-label" data-it="Marmi" data-en="Marble">Marmi</div>
+                        </div>
+                        <div class="split-mat-half" style="background-image: url('images/mobili/PHOTO-2021-06-25-12-19-46.jpg')">
+                            <div class="split-mat-label" data-it="Legni" data-en="Wood">Legni</div>
+                        </div>
+                    </div>
                 </div>
             </div>
 
             <div class="service-block reverse">
                 <div class="service-block-text">
                     <h3 data-it="Gestione Cantiere" data-en="Site Management">Gestione Cantiere</h3>
-                    <p data-it="Seguiamo il progetto dalla consegna dei materiali fino alla posa in opera finale. Un coordinamento completo con i direttori dei lavori, gli architetti e le imprese edili per garantire che tutto avvenga nei tempi previsti e con la massima cura." data-en="We follow the project from material delivery to final installation. Complete coordination with project managers, architects and construction companies to ensure everything happens on time and with the utmost care.">
-                        Seguiamo il progetto dalla consegna dei materiali fino alla posa in opera finale. Un coordinamento completo con i direttori dei lavori, gli architetti e le imprese edili per garantire che tutto avvenga nei tempi previsti e con la massima cura.
+                    <p data-it="Seguiamo ogni progetto esclusivamente con i nostri dipendenti, professionisti con anni di esperienza maturata in tutto il mondo. Dalla consegna dei materiali fino alla posa in opera finale, garantiamo un coordinamento completo con i direttori dei lavori, gli architetti e le imprese edili per garantire che tutto avvenga nei tempi previsti e con la massima cura." data-en="We follow every project exclusively with our own employees, professionals with years of experience gained worldwide. From material delivery to final installation, we guarantee complete coordination with project managers, architects and construction companies to ensure everything happens on time and with the utmost care.">
+                        Seguiamo ogni progetto esclusivamente con i nostri dipendenti, professionisti con anni di esperienza maturata in tutto il mondo. Dalla consegna dei materiali fino alla posa in opera finale, garantiamo un coordinamento completo con i direttori dei lavori, gli architetti e le imprese edili per garantire che tutto avvenga nei tempi previsti e con la massima cura.
                     </p>
                 </div>
-                <div class="service-block-image">
-                    <img src="images/stabilimenti/parco-mezzi.jpg" alt="Gestione Cantiere" onerror="this.parentElement.style.display='none'">
+                <div class="service-block-image service-block-image--placeholder">
+                    <!-- foto operai in cantiere — da inserire -->
                 </div>
             </div>
         </div>
@@ -198,6 +211,15 @@
                 <div class="process-step">
                     <div class="process-step-num"></div>
                     <div class="process-step-content">
+                        <h4 data-it="Preparazione e Premontaggio in Fabbrica" data-en="Preparation and Pre-assembly at the Factory">Preparazione e Premontaggio in Fabbrica</h4>
+                        <p data-it="Prima della consegna, ogni elemento viene preparato e premontato in fabbrica per la visione e l'approvazione finale del cliente" data-en="Before delivery, every element is prepared and pre-assembled at the factory for the client's final viewing and approval">
+                            Prima della consegna, ogni elemento viene preparato e premontato in fabbrica per la visione e l'approvazione finale del cliente
+                        </p>
+                    </div>
+                </div>
+                <div class="process-step">
+                    <div class="process-step-num"></div>
+                    <div class="process-step-content">
                         <h4 data-it="Consegna e Posa" data-en="Delivery and Installation">Consegna e Posa</h4>
                         <p data-it="Trasporto, posa in opera e collaudo finale con nostra squadra specializzata" data-en="Transport, installation and final testing with our specialized team">
                             Trasporto, posa in opera e collaudo finale con nostra squadra specializzata
@@ -228,7 +250,7 @@
                 <div class="footer-col">
                     <h3>V.B.M.</h3>
                     <p class="footer-subtitle">Ex Traditione ad Futurum</p>
-                    <p data-it="Artigianato italiano dal 1950" data-en="Italian craftsmanship since 1950">Artigianato italiano dal 1950</p>
+                    <p data-it="Artigianato italiano dal 1800" data-en="Italian craftsmanship since 1800">Artigianato italiano dal 1800</p>
                 </div>
                 <div class="footer-col">
                     <h4 data-it="Menu" data-en="Menu">Menu</h4>
