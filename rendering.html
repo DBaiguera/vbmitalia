@@ -100,13 +100,18 @@
     </section>
 
     <!-- Intro -->
-    <section class="intro-section">
+    <section class="manifesto-section">
         <div class="container">
             <div class="intro-content">
                 <h2 data-it="Vedere per credere" data-en="Seeing is believing">Vedere per credere</h2>
                 <p data-it="Prima di iniziare qualsiasi lavorazione, offriamo ai nostri clienti la possibilità di visualizzare il risultato finale attraverso rendering 3D fotorealistici ad alta risoluzione. Un investimento nel dialogo e nella chiarezza, per eliminare ogni incertezza e procedere con sicurezza." data-en="Before starting any work, we offer our clients the possibility of visualizing the final result through high-resolution photorealistic 3D renderings. An investment in dialogue and clarity, to eliminate any uncertainty and proceed with confidence.">
                     Prima di iniziare qualsiasi lavorazione, offriamo ai nostri clienti la possibilità di visualizzare il risultato finale attraverso rendering 3D fotorealistici ad alta risoluzione. Un investimento nel dialogo e nella chiarezza, per eliminare ogni incertezza e procedere con sicurezza.
                 </p>
+            </div>
+            <div class="scroll-arrow" id="scrollArrow">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
             </div>
         </div>
     </section>
@@ -284,5 +289,22 @@
 
     <script src="js/main.js"></script>
     <script src="js/gallery-loader.js"></script>
+    <script>
+        function fitPageHeader() {
+            const navbar = document.getElementById('navbar');
+            const header = document.querySelector('.page-header');
+            const manifesto = document.querySelector('.manifesto-section');
+            const newHeight = window.innerHeight - manifesto.offsetHeight;
+            if (newHeight > 150) header.style.height = newHeight + 'px';
+        }
+        fitPageHeader();
+        window.addEventListener('resize', fitPageHeader);
+
+        document.getElementById('scrollArrow').addEventListener('click', function() {
+            const manifesto = document.querySelector('.manifesto-section');
+            const navHeight = document.getElementById('navbar').offsetHeight;
+            window.scrollTo({ top: manifesto.offsetTop + manifesto.offsetHeight - navHeight, behavior: 'smooth' });
+        });
+    </script>
 </body>
 </html>

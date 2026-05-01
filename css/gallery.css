@@ -4,7 +4,7 @@
 .page-header {
     position: relative;
     height: 400px;
-    margin-top: 90px;
+    margin-top: 0;
     background-size: cover;
     background-position: center;
     display: flex;
@@ -53,7 +53,7 @@
    INTRO SECTION
    ======================================== */
 .intro-section {
-    padding: 80px 0;
+    padding: 32px 0;
     background: #f8f6f3;
 }
 
@@ -74,6 +74,60 @@
     line-height: 1.9;
     color: #666;
     margin-bottom: 20px;
+}
+
+/* ========================================
+   MANIFESTO SECTION (dark intro)
+   ======================================== */
+.manifesto-section {
+    background: #2c2c2c;
+    color: #fff;
+    padding: 1.5rem 0;
+    text-align: center;
+}
+
+.manifesto-section h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 3rem;
+    color: #c9a882;
+    margin-bottom: 1.5rem;
+}
+
+.manifesto-section p {
+    font-size: 1.1rem;
+    line-height: 1.9;
+    color: #fff;
+    max-width: 700px;
+    margin: 0 auto 1.5rem;
+    opacity: 0.9;
+}
+
+/* ========================================
+   SCROLL ARROW
+   ======================================== */
+.scroll-arrow {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+    cursor: pointer;
+}
+
+.scroll-arrow svg {
+    width: 40px;
+    height: 40px;
+    stroke: #c9a882;
+    fill: none;
+    stroke-width: 1.5;
+    animation: bounce-arrow 1.8s ease-in-out infinite;
+}
+
+@keyframes bounce-arrow {
+    0%, 100% { transform: translateY(0); opacity: 0.6; }
+    50% { transform: translateY(10px); opacity: 1; }
+}
+
+@media (max-width: 768px) {
+    .manifesto-section h2 { font-size: 2rem; }
 }
 
 /* ========================================
@@ -376,9 +430,11 @@
 .split-header {
     position: relative;
     display: flex;
-    height: 600px;
+    height: 65vh;
+    min-height: 400px;
     margin-top: 0;
     margin-bottom: 0;
+    padding: 0;
     overflow: hidden;
 }
 
@@ -435,11 +491,24 @@
    LOGO SECTION (CHI SIAMO)
    ======================================== */
 .logo-section {
-    padding: 80px 0 80px 0;
-    padding-top: 130px;
-    margin-top: 90px;
-    background: linear-gradient(135deg, #2c2420 0%, #5a3e2b 35%, #8b6340 60%, #c9a882 100%);
+    padding: 80px 0;
+    margin-top: 0;
+    background-size: cover;
+    background-position: center;
     text-align: center;
+}
+
+.logo-section-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.52);
+    z-index: 0;
+}
+
+.logo-section .container,
+.logo-section .scroll-arrow {
+    position: relative;
+    z-index: 1;
 }
 
 .logo-showcase {

@@ -59,7 +59,7 @@
     </section>
 
     <!-- Intro -->
-    <section class="intro-section">
+    <section class="manifesto-section">
         <div class="container">
             <div class="intro-content">
                 <h2 data-it="Progetti completi, dalla A alla Z" data-en="Complete projects, from A to Z">
@@ -68,6 +68,11 @@
                 <p data-it="V.B.M. realizza ambienti dove marmo e legno si fondono in un equilibrio perfetto. Ogni progetto nasce da una visione unitaria: materiali, forme e finiture vengono scelti e lavorati insieme per creare spazi di rara bellezza." data-en="V.B.M. creates environments where marble and wood merge in perfect balance. Each project begins from a unified vision: materials, forms and finishes are chosen and crafted together to create spaces of rare beauty.">
                     V.B.M. realizza ambienti dove marmo e legno si fondono in un equilibrio perfetto. Ogni progetto nasce da una visione unitaria: materiali, forme e finiture vengono scelti e lavorati insieme per creare spazi di rara bellezza.
                 </p>
+            </div>
+            <div class="scroll-arrow" id="scrollArrow">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
             </div>
         </div>
     </section>
@@ -180,6 +185,23 @@
 
     <script src="js/main.js"></script>
     <script src="js/gallery-loader.js"></script>
+    <script>
+        function fitPageHeader() {
+            const navbar = document.getElementById('navbar');
+            const header = document.querySelector('.page-header');
+            const manifesto = document.querySelector('.manifesto-section');
+            const newHeight = window.innerHeight - manifesto.offsetHeight;
+            if (newHeight > 150) header.style.height = newHeight + 'px';
+        }
+        fitPageHeader();
+        window.addEventListener('resize', fitPageHeader);
+
+        document.getElementById('scrollArrow').addEventListener('click', function() {
+            const manifesto = document.querySelector('.manifesto-section');
+            const navHeight = document.getElementById('navbar').offsetHeight;
+            window.scrollTo({ top: manifesto.offsetTop + manifesto.offsetHeight - navHeight, behavior: 'smooth' });
+        });
+    </script>
     <script>
     document.addEventListener('DOMContentLoaded', function() {
         // Load project galleries using existing configs

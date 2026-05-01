@@ -11,6 +11,17 @@
     <link rel="preload" href="images/slider/slide1.jpg" as="image">
     <link rel="stylesheet" href="css/fonts.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/gallery.css">
+    <style>
+        .slider-dots { bottom: 75px; }
+        #scrollArrow {
+            position: absolute;
+            bottom: 1.5rem;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 10;
+        }
+    </style>
 </head>
 <body>
     <!-- Navigation -->
@@ -97,6 +108,11 @@
         <button class="slider-btn prev" id="prevSlide">&#10094;</button>
         <button class="slider-btn next" id="nextSlide">&#10095;</button>
         <div class="slider-dots" id="sliderDots"></div>
+        <div class="scroll-arrow" id="scrollArrow">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+        </div>
     </section>
 
     <!-- Services Section -->
@@ -213,5 +229,12 @@
     </footer>
 
     <script src="js/main.js"></script>
+    <script>
+        document.getElementById('scrollArrow').addEventListener('click', function() {
+            const slider = document.getElementById('heroSlider');
+            const navHeight = document.getElementById('navbar').offsetHeight;
+            window.scrollTo({ top: slider.offsetTop + slider.offsetHeight - navHeight, behavior: 'smooth' });
+        });
+    </script>
 </body>
 </html>

@@ -63,7 +63,7 @@
     </section>
 
     <!-- Intro Section -->
-    <section class="intro-section">
+    <section class="manifesto-section">
         <div class="container">
             <div class="intro-content">
                 <h2 data-it="Arredi artigianali che raccontano storie" data-en="Artisan furnishings that tell stories">
@@ -75,6 +75,11 @@
                 <p data-it="Legni pregiati, finiture curate nei minimi dettagli, meccanismi di qualità superiore: ogni componente viene selezionato con cura per garantire la massima qualità e durevolezza." data-en="Premium woods, finishes with attention to the smallest details, superior quality mechanisms: every component is carefully selected to ensure maximum quality and durability.">
                     Legni pregiati, finiture curate nei minimi dettagli, meccanismi di qualità superiore: ogni componente viene selezionato con cura per garantire la massima qualità e durevolezza.
                 </p>
+            </div>
+            <div class="scroll-arrow" id="scrollArrow">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
             </div>
         </div>
     </section>
@@ -319,5 +324,21 @@
 
     <script src="js/main.js"></script>
     <script src="js/gallery-loader.js"></script>
+    <script>
+        function fitPageHeader() {
+            const header = document.querySelector('.page-header');
+            const manifesto = document.querySelector('.manifesto-section');
+            const newHeight = window.innerHeight - manifesto.offsetHeight;
+            if (newHeight > 150) header.style.height = newHeight + 'px';
+        }
+        fitPageHeader();
+        window.addEventListener('resize', fitPageHeader);
+
+        document.getElementById('scrollArrow').addEventListener('click', function() {
+            const manifesto = document.querySelector('.manifesto-section');
+            const navHeight = document.getElementById('navbar').offsetHeight;
+            window.scrollTo({ top: manifesto.offsetTop + manifesto.offsetHeight - navHeight, behavior: 'smooth' });
+        });
+    </script>
 </body>
 </html>

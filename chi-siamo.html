@@ -11,6 +11,23 @@
     <link rel="stylesheet" href="css/fonts.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/gallery.css">
+    <style>
+        .logo-section {
+            height: 100vh;
+            padding: 2rem 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+        #scrollArrow {
+            position: absolute;
+            bottom: 1.5rem;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    </style>
 </head>
 <body>
     <!-- Navigation -->
@@ -52,13 +69,19 @@
     </nav>
 
     <!-- Logo Section -->
-    <section class="logo-section">
+    <section class="logo-section" style="background-image: url('images/marmi-header.jpg')">
+        <div class="logo-section-overlay"></div>
         <div class="container">
             <div class="logo-showcase">
                 <h1 class="chisiamo-title" data-it="Chi Siamo" data-en="About Us">Chi Siamo</h1>
                 <img src="images/logo-vbm.png" alt="V.B.M. Logo" class="logo-large">
                 <p class="logo-motto">Ex Traditione ad Futurum</p>
             </div>
+        </div>
+        <div class="scroll-arrow" id="scrollArrow">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
         </div>
     </section>
 
@@ -68,12 +91,16 @@
             <div class="story-content">
                 <div class="story-text">
                     <h2 data-it="La Nostra Storia" data-en="Our Story">La Nostra Storia</h2>
-                    <p data-it="La storia di V.B.M. inizia nel 1950, quando i fondatori aprirono il loro primo laboratorio artigianale. Con passione, dedizione e un innato talento per la lavorazione del legno e del marmo, posero le basi di quella che sarebbe diventata un'eccellenza italiana riconosciuta." data-en="The story of V.B.M. begins in 1950, when the founders opened their first artisan workshop. With passion, dedication and an innate talent for working wood and marble, they laid the foundations of what would become a recognized Italian excellence.">
-                        La storia di V.B.M. inizia nel 1950, quando i fondatori aprirono il loro primo laboratorio artigianale. Con passione, dedizione e un innato talento per la lavorazione del legno e del marmo, posero le basi di quella che sarebbe diventata un'eccellenza italiana riconosciuta.
+                    <p>
+                        La famiglia Boghi, di Cantù (Como), ha iniziato a produrre mobili a partire dal 1800, proseguendo con la società Legni d'Arte fino alla fine degli anni '70 nella realizzazione di mobili pregiati.
                     </p>
-                    <p data-it="Oggi, alla quarta generazione, continuiamo a portare avanti i valori e l'esperienza tramandati di padre in figlio, arricchendoli con le tecnologie più moderne e un design sempre al passo con i tempi. Ogni progetto è per noi un'opportunità per dimostrare che la vera qualità artigianale non conosce tempo." data-en="Today, in our fourth generation, we continue to carry forward the values and experience passed from father to son, enriching them with the most modern technologies and contemporary design. Each project is an opportunity to demonstrate that true artisan quality is timeless.">
-                        Oggi, alla quarta generazione, continuiamo a portare avanti i valori e l'esperienza tramandati di padre in figlio, arricchendoli con le tecnologie più moderne e un design sempre al passo con i tempi. Ogni progetto è per noi un'opportunità per dimostrare che la vera qualità artigianale non conosce tempo.
+                    <p>
+                        La storia recente di Cantù e lo sviluppo dell'industria del mobile hanno visto l'attiva partecipazione di vari membri della famiglia Boghi, che ha contribuito, tra le altre cose, alla costruzione dell'Esposizione Permanente (prima pietra posata nel 1927, inaugurata nel 1930). La Legni d'Arte, con sede in via della Madonna a Cantù, era presente come espositore e produttore alla prima fiera del mobile a Milano nel 1961, poi diventata nel 1967 il Salone Internazionale del Mobile.
                     </p>
+                    <p>
+                        In tempi più recenti nasce, su iniziativa di Vittorio Boghi (classe 1973) — omonimo del nonno (classe 1911) — V.B.M., per continuare una tradizione che non ha mai smesso di fare parte del suo DNA. Alla produzione del mobile su misura viene affiancata la lavorazione del marmo su disegno.
+                    </p>
+                    <p><em>Dal passato al futuro attraverso la tradizione.</em></p>
                 </div>
             </div>
         </div>
@@ -84,8 +111,8 @@
         <div class="container">
             <h2 class="section-title" data-it="La Nostra Eredità" data-en="Our Heritage">La Nostra Eredità</h2>
             <div class="heritage-content">
-                <p class="heritage-intro" data-it="Dalla partecipazione ai primi Saloni del Mobile di Milano alle collaborazioni con architetti e designer di fama internazionale, la nostra storia è costellata di traguardi che ci rendono orgogliosi." data-en="From participation in the first Milan Furniture Fairs to collaborations with internationally renowned architects and designers, our history is marked by achievements that make us proud.">
-                    Dalla partecipazione ai primi Saloni del Mobile di Milano alle collaborazioni con architetti e designer di fama internazionale, la nostra storia è costellata di traguardi che ci rendono orgogliosi.
+                <p class="heritage-intro">
+                    Dalla prima fiera del mobile di Milano fino alla nascita di V.B.M., oltre 200 anni di storia artigianale della famiglia Boghi raccontano una tradizione che si rinnova senza mai dimenticare le proprie radici.
                 </p>
 
                 <div class="heritage-gallery" id="heritage-gallery">
@@ -94,62 +121,50 @@
 
                 <div class="heritage-timeline">
                     <div class="timeline-item">
-                        <div class="timeline-year">1950</div>
+                        <div class="timeline-year">1800</div>
                         <div class="timeline-content">
-                            <h4 data-it="La Fondazione" data-en="The Foundation">La Fondazione</h4>
-                            <p data-it="V.B.M. apre il primo laboratorio artigianale" data-en="V.B.M. opens the first artisan workshop">
-                                V.B.M. apre il primo laboratorio artigianale
-                            </p>
+                            <h4>Le Origini</h4>
+                            <p>La famiglia Boghi di Cantù inizia la produzione di mobili pregiati.</p>
                         </div>
                     </div>
 
                     <div class="timeline-item">
-                        <div class="timeline-year">1965</div>
+                        <div class="timeline-year">1927</div>
                         <div class="timeline-content">
-                            <h4 data-it="Espansione" data-en="Expansion">Espansione</h4>
-                            <p data-it="Ampliamento del laboratorio e primo showroom" data-en="Workshop expansion and first showroom">
-                                Ampliamento del laboratorio e primo showroom
-                            </p>
+                            <h4>Esposizione Permanente</h4>
+                            <p>La famiglia Boghi contribuisce alla costruzione dell'Esposizione Permanente di Cantù (inaugurata nel 1930).</p>
                         </div>
                     </div>
 
                     <div class="timeline-item">
-                        <div class="timeline-year">1980</div>
+                        <div class="timeline-year">1961</div>
                         <div class="timeline-content">
-                            <h4 data-it="Seconda Generazione" data-en="Second Generation">Seconda Generazione</h4>
-                            <p data-it="I figli entrano nell'azienda portando innovazione" data-en="The children join the company bringing innovation">
-                                I figli entrano nell'azienda portando innovazione
-                            </p>
+                            <h4>Prima Fiera del Mobile</h4>
+                            <p>Legni d'Arte è presente come espositore e produttore alla prima fiera del mobile di Milano.</p>
                         </div>
                     </div>
 
                     <div class="timeline-item">
-                        <div class="timeline-year">2000</div>
+                        <div class="timeline-year">1967</div>
                         <div class="timeline-content">
-                            <h4 data-it="Modernizzazione" data-en="Modernization">Modernizzazione</h4>
-                            <p data-it="Investimenti in tecnologie CNC e CAD 3D" data-en="Investments in CNC technologies and 3D CAD">
-                                Investimenti in tecnologie CNC e CAD 3D
-                            </p>
+                            <h4>Salone Internazionale del Mobile</h4>
+                            <p>La fiera di Milano diventa il Salone Internazionale del Mobile, con la famiglia Boghi tra i protagonisti.</p>
                         </div>
                     </div>
 
                     <div class="timeline-item">
-                        <div class="timeline-year">2020</div>
+                        <div class="timeline-year">Anni '70</div>
                         <div class="timeline-content">
-                            <h4 data-it="Quarta Generazione" data-en="Fourth Generation">Quarta Generazione</h4>
-                            <p data-it="Una nuova generazione porta visione contemporanea" data-en="A new generation brings contemporary vision">
-                                Una nuova generazione porta visione contemporanea
-                            </p>
+                            <h4>Legni d'Arte</h4>
+                            <p>La società Legni d'Arte prosegue fino alla fine degli anni '70 nella realizzazione di mobili pregiati.</p>
                         </div>
                     </div>
 
                     <div class="timeline-item">
-                        <div class="timeline-year">2026</div>
+                        <div class="timeline-year">Oggi</div>
                         <div class="timeline-content">
-                            <h4 data-it="Oggi" data-en="Today">Oggi</h4>
-                            <p data-it="Continuiamo a crescere, sempre fedeli ai nostri valori" data-en="We continue to grow, always faithful to our values">
-                                Continuiamo a crescere, sempre fedeli ai nostri valori
-                            </p>
+                            <h4>Nasce V.B.M.</h4>
+                            <p>Vittorio Boghi (classe 1973), omonimo del nonno (classe 1911), fonda V.B.M. affiancando al mobile su misura la lavorazione del marmo su disegno.</p>
                         </div>
                     </div>
                 </div>
@@ -228,5 +243,12 @@
 
     <script src="js/main.js"></script>
     <script src="js/gallery-loader.js"></script>
+    <script>
+        document.getElementById('scrollArrow').addEventListener('click', function() {
+            const logoSection = document.querySelector('.logo-section');
+            const navHeight = document.getElementById('navbar').offsetHeight;
+            window.scrollTo({ top: logoSection.offsetTop + logoSection.offsetHeight - navHeight, behavior: 'smooth' });
+        });
+    </script>
 </body>
 </html>

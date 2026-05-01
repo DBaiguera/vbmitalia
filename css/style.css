@@ -61,15 +61,16 @@ a {
     top: 0;
     left: 0;
     width: 100%;
-    background: rgba(255, 255, 255, 0.98);
-    backdrop-filter: blur(10px);
-    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.05);
+    background: transparent;
+    box-shadow: none;
     z-index: 1000;
-    transition: var(--transition);
+    transition: background 0.4s ease, box-shadow 0.4s ease;
 }
 
 .navbar.scrolled {
-    box-shadow: 0 2px 30px rgba(0, 0, 0, 0.1);
+    background: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08);
 }
 
 .nav-wrapper {
@@ -131,7 +132,8 @@ a {
     font-weight: 500;
     letter-spacing: 0.8px;
     text-transform: uppercase;
-    color: var(--text-dark);
+    color: #fff;
+    text-shadow: 0 1px 4px rgba(0,0,0,0.4);
     position: relative;
     padding: 5px 0;
     white-space: nowrap;
@@ -173,20 +175,44 @@ a {
     font-size: 13px;
     font-weight: 600;
     letter-spacing: 1px;
-    color: var(--text-light);
+    color: rgba(255,255,255,0.8);
     cursor: pointer;
     transition: var(--transition);
+    text-shadow: 0 1px 4px rgba(0,0,0,0.4);
 }
 
 .lang-btn.active {
-    color: var(--secondary-color);
+    color: #fff;
 }
 
 .lang-btn:hover {
-    color: var(--secondary-color);
+    color: #fff;
 }
 
 .separator {
+    color: rgba(255,255,255,0.5);
+    text-shadow: none;
+}
+
+.navbar.scrolled .nav-link {
+    color: var(--text-dark);
+    text-shadow: none;
+}
+
+.navbar.scrolled .lang-btn {
+    color: var(--text-light);
+    text-shadow: none;
+}
+
+.navbar.scrolled .lang-btn.active {
+    color: var(--secondary-color);
+}
+
+.navbar.scrolled .lang-btn:hover {
+    color: var(--secondary-color);
+}
+
+.navbar.scrolled .separator {
     color: var(--text-light);
 }
 
@@ -202,8 +228,12 @@ a {
 .mobile-toggle span {
     width: 25px;
     height: 2px;
-    background: var(--primary-color);
+    background: #fff;
     transition: var(--transition);
+}
+
+.navbar.scrolled .mobile-toggle span {
+    background: var(--primary-color);
 }
 
 /* ========================================
@@ -212,7 +242,7 @@ a {
 .hero-slider {
     position: relative;
     height: 100vh;
-    margin-top: 90px;
+    margin-top: 0;
     overflow: hidden;
     background-color: #1a1a1a;
 }
@@ -634,6 +664,11 @@ section {
 
     .nav-menu.active {
         left: 0;
+    }
+
+    .nav-menu .nav-link {
+        color: var(--text-dark);
+        text-shadow: none;
     }
 
     .mobile-toggle {

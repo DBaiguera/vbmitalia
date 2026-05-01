@@ -40,19 +40,6 @@
             margin-bottom: 0.8rem;
         }
         .showcase-card p { color: #666; line-height: 1.7; font-size: 0.95rem; }
-        .manifesto-section {
-            background: #2c2c2c;
-            color: #fff;
-            padding: 6rem 0;
-            text-align: center;
-        }
-        .manifesto-section h2 {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 3rem;
-            color: #c9a882;
-            margin-bottom: 1.5rem;
-        }
-        .manifesto-section p { font-size: 1.1rem; line-height: 1.9; max-width: 700px; margin: 0 auto 1.5rem; opacity: 0.9; }
         @media (max-width: 768px) {
             .category-showcase { grid-template-columns: 1fr; }
             .manifesto-section h2 { font-size: 2rem; }
@@ -115,6 +102,11 @@
             <p data-it="Se l'idea esiste, noi possiamo realizzarla." data-en="If the idea exists, we can create it.">
                 <em>Se l'idea esiste, noi possiamo realizzarla.</em>
             </p>
+            <div class="scroll-arrow" id="scrollArrow">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+            </div>
         </div>
     </div>
 
@@ -279,5 +271,22 @@
 
     <script src="js/main.js"></script>
     <script src="js/gallery-loader.js"></script>
+    <script>
+        function fitPageHeader() {
+            const navbar = document.getElementById('navbar');
+            const header = document.querySelector('.page-header');
+            const manifesto = document.querySelector('.manifesto-section');
+            const newHeight = window.innerHeight - manifesto.offsetHeight;
+            if (newHeight > 150) header.style.height = newHeight + 'px';
+        }
+        fitPageHeader();
+        window.addEventListener('resize', fitPageHeader);
+
+        document.getElementById('scrollArrow').addEventListener('click', function() {
+            const manifesto = document.querySelector('.manifesto-section');
+            const navHeight = document.getElementById('navbar').offsetHeight;
+            window.scrollTo({ top: manifesto.offsetTop + manifesto.offsetHeight - navHeight, behavior: 'smooth' });
+        });
+    </script>
 </body>
 </html>

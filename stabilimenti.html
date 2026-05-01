@@ -53,7 +53,7 @@
             <div class="split-overlay"></div>
             <div class="split-label" data-it="Stabilimento Marmi" data-en="Marble Workshop">Stabilimento Marmi</div>
         </div>
-        <div class="split-half split-mobili" style="background-image: url('images/stabilimenti/_DSC4040.jpg')">
+        <div class="split-half split-mobili" style="background-image: url('images/stabilimenti/_DSC4040.jpg'); background-position: center top;">
             <div class="split-overlay"></div>
             <div class="split-label" data-it="Stabilimento Mobili" data-en="Furniture Workshop">Stabilimento Mobili</div>
         </div>
@@ -63,12 +63,17 @@
     </section>
 
     <!-- Intro -->
-    <section class="intro-section" style="padding-top: 0;">
+    <section class="manifesto-section">
         <div class="container">
             <div class="intro-content">
                 <p data-it="I nostri stabilimenti sono il cuore pulsante di V.B.M.: laboratorio all'avanguardia e spazi di progettazione dove ogni giorno nascono capolavori artigianali." data-en="Our facilities are the beating heart of V.B.M.: cutting-edge workshops and design spaces where artisan masterpieces are created every day.">
                     I nostri stabilimenti sono il cuore pulsante di V.B.M.: laboratorio all'avanguardia e spazi di progettazione dove ogni giorno nascono capolavori artigianali.
                 </p>
+            </div>
+            <div class="scroll-arrow" id="scrollArrow">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
             </div>
         </div>
     </section>
@@ -175,6 +180,24 @@
 
     <script src="js/main.js"></script>
     <script src="js/gallery-loader.js"></script>
+    <script>
+        function fitManifesto() {
+            const navbar = document.getElementById('navbar');
+            const splitHeader = document.querySelector('.split-header');
+            const manifesto = document.querySelector('.manifesto-section');
+            const remaining = window.innerHeight - splitHeader.offsetHeight;
+            const pad = Math.max(24, remaining / 2);
+            manifesto.style.padding = pad + 'px 0';
+        }
+        fitManifesto();
+        window.addEventListener('resize', fitManifesto);
+
+        document.getElementById('scrollArrow').addEventListener('click', function() {
+            const manifesto = document.querySelector('.manifesto-section');
+            const navHeight = document.getElementById('navbar').offsetHeight;
+            window.scrollTo({ top: manifesto.offsetTop + manifesto.offsetHeight - navHeight, behavior: 'smooth' });
+        });
+    </script>
     <script>
     document.addEventListener('DOMContentLoaded', function() {
         loadGallery({ path: 'images/stabilimenti/', container: 'stabilimenti-gallery', count: 19, useManifest: true });
