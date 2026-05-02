@@ -1226,14 +1226,15 @@
     /* Stabilimenti: foto affiancate orizzontalmente a tutto schermo */
     .split-header {
         flex-direction: row;
+        flex-wrap: nowrap;
         height: 100vh;
-        min-height: unset;
+        min-height: 0;
     }
 
     .split-half {
-        flex: 1;
+        flex: 0 0 50%;
+        min-width: 0;
         height: 100%;
-        width: auto;
     }
 }
 
