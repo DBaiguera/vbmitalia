@@ -651,7 +651,7 @@ section {
     .nav-menu {
         position: fixed;
         top: 90px;
-        left: -100%;
+        left: 0;
         width: 100%;
         height: calc(100vh - 90px);
         background: var(--white);
@@ -659,12 +659,15 @@ section {
         align-items: center;
         justify-content: center;
         gap: 30px;
-        transition: var(--transition);
+        transition: transform 0.3s ease, visibility 0.3s ease;
         box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+        transform: translateX(-100%);
+        visibility: hidden;
     }
 
     .nav-menu.active {
-        left: 0;
+        transform: translateX(0);
+        visibility: visible;
     }
 
     .nav-menu .nav-link {
