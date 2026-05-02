@@ -429,3 +429,21 @@ document.querySelectorAll('.nav-link').forEach(link => {
         link.classList.add('active');
     }
 });
+
+// ========================================
+// WHEEL → SCROLL ARROW (quando si è in cima)
+// ========================================
+(function() {
+    let handled = false;
+    window.addEventListener('wheel', function(e) {
+        if (window.scrollY === 0 && e.deltaY > 0 && !handled) {
+            const arrow = document.getElementById('scrollArrow');
+            if (arrow) {
+                e.preventDefault();
+                handled = true;
+                arrow.click();
+                setTimeout(function() { handled = false; }, 1000);
+            }
+        }
+    }, { passive: false });
+})();

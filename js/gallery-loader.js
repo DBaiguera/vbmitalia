@@ -38,7 +38,7 @@ const galleryConfig = {
     // Mobili
     mobili: {
         path: 'images/mobili/',
-        count: 16,
+        count: 13,
         container: 'mobili-gallery',
         useManifest: true
     },
