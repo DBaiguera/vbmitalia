@@ -754,4 +754,13 @@ section {
     section {
         padding: 60px 0;
     }
+
+    .container {
+        padding: 0 15px;
+    }
+
+    .nav-menu {
+        gap: 20px;
+        overflow-y: auto;
+    }
 }
