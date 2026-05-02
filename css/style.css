@@ -649,6 +649,7 @@ section {
 
 @media (max-width: 768px) {
     .nav-menu {
+        display: none;
         position: fixed;
         top: 90px;
         left: 0;
@@ -659,15 +660,17 @@ section {
         align-items: center;
         justify-content: center;
         gap: 30px;
-        transition: transform 0.3s ease, visibility 0.3s ease;
         box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-        transform: translateX(-100%);
-        visibility: hidden;
     }
 
     .nav-menu.active {
-        transform: translateX(0);
-        visibility: visible;
+        display: flex;
+        animation: menuFadeIn 0.25s ease;
+    }
+
+    @keyframes menuFadeIn {
+        from { opacity: 0; }
+        to   { opacity: 1; }
     }
 
     .nav-menu .nav-link {
