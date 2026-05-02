@@ -3,7 +3,7 @@
    ======================================== */
 .page-header {
     position: relative;
-    height: 400px;
+    height: 55vh;
     margin-top: 0;
     background-size: cover;
     background-position: center;
@@ -549,12 +549,7 @@
     text-shadow: 2px 2px 15px rgba(0,0,0,0.6);
 }
 
-@media (max-width: 768px) {
-    .split-header {
-        flex-direction: column;
-        height: 400px;
-    }
-}
+/* split-header mobile gestito nella sezione MOBILE — SEZIONI E LAYOUT */
 
 /* ========================================
    LOGO SECTION (CHI SIAMO)
@@ -1193,6 +1188,16 @@
    ======================================== */
 
 @media (max-width: 768px) {
+    .page-header {
+        height: 100vh;
+    }
+
+    /* manifesto-section esclusa: il JS usa il suo offsetHeight per calcolare
+       l'altezza del page-header — il padding deve restare piccolo */
+    .manifesto-section {
+        padding: 20px 0;
+    }
+
     .gallery-section,
     .projects-section,
     .workshop-section,
@@ -1201,7 +1206,6 @@
     .team-section,
     .materials-section,
     .process-section,
-    .manifesto-section,
     .values-section {
         padding: 60px 0;
     }
@@ -1218,6 +1222,19 @@
 
     .cta-section { padding: 60px 0; }
     .cta-content h2 { font-size: 32px; }
+
+    /* Stabilimenti: foto affiancate orizzontalmente a tutto schermo */
+    .split-header {
+        flex-direction: row;
+        height: 100vh;
+        min-height: unset;
+    }
+
+    .split-half {
+        flex: 1;
+        height: 100%;
+        width: auto;
+    }
 }
 
 @media (max-width: 480px) {
@@ -1229,7 +1246,6 @@
     .team-section,
     .materials-section,
     .process-section,
-    .manifesto-section,
     .values-section {
         padding: 50px 0;
     }
